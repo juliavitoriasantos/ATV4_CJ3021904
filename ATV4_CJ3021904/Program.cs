@@ -39,6 +39,7 @@
                         break;
                     
             }
+            //1
 
             int d;
 
@@ -79,6 +80,7 @@
                     break;
                     
             }
+            //2
 
             float compra, p;
 
@@ -106,6 +108,7 @@
                 default: Console.WriteLine("Opção inválida");
                     break;
             }
+            //3
 
             int m, a;
 
@@ -158,6 +161,7 @@
                 default: Console.WriteLine("Opção inválida.");
                     break;
             }
+            //4
 
             char c;
             int ni1, ni2;
@@ -188,6 +192,7 @@
                 case '^': Console.WriteLine("{0}", Math.Pow(ni1, ni2));
                     break;
            }
+            //5
 
             float s, cargo;
 
@@ -199,33 +204,34 @@
 
             switch(cargo)
             {
-                case 1: Console.WriteLine("{0}", s + ((7.5 / 100) * s));
+                case 1: Console.WriteLine("Novo salário= {0}, ", s + ((7.5 / 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((7.5 / 100) * s) - s);
                     break;
 
-                case 2: Console.WriteLine("{0}", s + ((9.7 / 100) * s));
+                case 2: Console.WriteLine("Novo salário= {0}, ", s + ((9.7 / 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((9.7 / 100) * s) - s);
                     break;
 
-                case 3: Console.WriteLine("{0}", s + ((11.7 / 100) * s));
+                case 3: Console.WriteLine("Novo salário= {0}, ", s + ((11.7 / 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((11.7 / 100) * s) - s);
                     break;
 
-                case 4: Console.WriteLine("{0}", s + ((8.9 / 100) * s));
+                case 4: Console.WriteLine("Novo salário= {0}, ", s + ((8.9 / 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((8.9 / 100) * s) - s);
                     break;
 
-                case 5: Console.WriteLine("{0}", s + ((13.24/ 100) * s));
+                case 5: Console.WriteLine("Novo salário= {0}, ", s + ((13.24/ 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((13.24 / 100) * s) - s);
                     break;
 
-                case 6: Console.WriteLine("{0}", s + ((10.4 / 100) * s));
+                case 6: Console.WriteLine("Novo salário= {0}, ", s + ((10.4 / 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((10.4 / 100) * s) - s);
                     break;
 
-                case 7: Console.WriteLine("{0}", s + ((14.6/ 100) * s));
+                case 7: Console.WriteLine("Novo salário= {0}, ", s + ((14.6/ 100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((14.6 / 100) * s) - s);
                     break;
 
-                default: Console.WriteLine("{0}", s + ((43.5/100) * s));
+                default: Console.WriteLine("Novo salário= {0}, ", s + ((43.5/100) * s), "salário antigo= {1}, ", s, "Diferença= {2}, ", s + ((43.5 / 100) * s) - s);
                     break;
                     
                    
 
             }
+            //6
 
             float sm;
 
@@ -233,15 +239,22 @@
             sm = float.Parse(Console.ReadLine());
 
             if (sm <= 1903.98) {
-                Console.WriteLine("Insento de impostos");
+                Console.WriteLine("Insento de impostos, salário líquido= {0}", sm);
                     }
             if (sm <= 2826.65 && sm >= 1903.99) ;
             {
-                Console.WriteLine("{0}", 7.5 / 100 * sm);
+                Console.WriteLine("Imposto= {0}, ", 7.5 / 100 * sm, "salário líquido= {1}", sm - (7.5 / 100 * sm));
                     }
             if(sm >= 2826.66 && sm<= 3751.05)
             {
-                Console.WriteLine("{0}", 15 / 100 * sm);
+                Console.WriteLine("Imposto= {0}, ", 15 / 100 * sm, "salário líquido= {1}", sm - (15 / 100 * sm));
+            }
+
+            if (sm >= 3751.06 && sm <= 4664.68)
+            {
+                Console.WriteLine("Imposto= {0}, ", 22.5 / 100 * sm, "salário líquido= {1}", sm - (22.5 / 100 * sm));
+            }
+            else { Console.WriteLine("Imposto= {0}, ", 27.5 / 100 * sm, "salário líquido= {1}", sm - (27.5 / 100 * sm));
             }
 
 
